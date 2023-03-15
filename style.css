@@ -1,6 +1,7 @@
 body {
   background-color: blueviolet;
   font-family: 'Courier New', Courier, monospace;
+
 }
 
 #search {
@@ -17,7 +18,7 @@ body {
 }
 
 #description-box {
-  width: 430px;
+  width: 480px;
   height: 640px;
   background-color: aliceblue;
   display: flex;
@@ -33,14 +34,16 @@ body {
 #container {
   display: flex;
   vertical-align: top;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 20px;
+  max-width: 1000px;
 }
 
 #header {
   background-color: aliceblue;
   color: blueviolet;
-  height: 100px;
+  height: 100%;
+  min-width: 460px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,4 +71,9 @@ button:active {
   color: blueviolet;
 }
 
-;
+@media only screen and (max-width: 940px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+  }
+}
